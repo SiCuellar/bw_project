@@ -1,3 +1,7 @@
+🚀 **Deployed URL**: [Here 🌐](https://bw-project.onrender.com/)
+
+
+
 # BW Project - Device Readings 📱
 
 A Sinatra 🎩 application designed to store and retrieve device readings.
@@ -84,6 +88,8 @@ rspec
 
 ## Project Reflection
 note: I spent the 2 hours coding and did not count the time it took to deploy the repo and answer these questions 
+🚀 **Deployed URL**: [Here 🌐](https://bw-project.onrender.com/)
+
 
 What roadblocks did you run into when writing your code (i.e.,where did you spend the bulk of your time)?
 - I think the first roadblock was just deciding what to use to build this. I was initally going to use rails but that would have been overkill to build something like ths. I have'nt used Sinatra in a long time so it took a while to go over the docs and read me. In particular I think the directory structure is something that took a while, since I ended up going for a more Modular style, therefore I had to make sure the files all linked together correctly.  
