@@ -70,3 +70,14 @@ curl -X POST http://localhost:9292/readings \
 ```
 rspec
 ```
+
+## Contributing
+
+1. **Fork the project.**
+2. **Create a new branch** for your feature or bugfix.
+3. **Make your changes.**
+4. **Submit a pull request.**
+
+![](https://media.giphy.com/media/H6uTWVf97ywhisZtUN/giphy.gif)
+### pretend it says "BrightWheel!" under the text in the gif.🤣
+

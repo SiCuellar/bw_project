@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'redcarpet'
 require_relative '../services/readings_service'
 
 class ReadingsController < Sinatra::Base
@@ -7,6 +8,13 @@ class ReadingsController < Sinatra::Base
   before do
     content_type :json
   end
+
+  get '/' do
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    content_type :html
+    markdown.render(File.read('README.md'))
+  end
+
 
   post '/readings' do
     begin
