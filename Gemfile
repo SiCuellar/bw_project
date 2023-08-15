@@ -7,6 +7,7 @@ gem 'sinatra-contrib'
 gem 'redcarpet'
 
 gem 'json'
+gem 'puma'
 
 # Testing
 gem 'rspec'
