@@ -9,7 +9,6 @@ class ReadingsController < Sinatra::Base
   end
 
   post '/readings' do
-    binding.pry
     begin
       payload = JSON.parse(request.body.read)
 
