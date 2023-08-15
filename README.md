@@ -81,3 +81,18 @@ rspec
 ![](https://media.giphy.com/media/H6uTWVf97ywhisZtUN/giphy.gif)
 ### pretend it says "BrightWheel!" under the text in the gif.🤣
 
+
+## Project Reflection
+note: I spent the 2 hours coding and did not count the time it took to deploy the repo and answer these questions 
+
+What roadblocks did you run into when writing your code (i.e.,where did you spend the bulk of your time)?
+- I think the first roadblock was just deciding what to use to build this. I was initally going to use rails but that would have been overkill to build something like ths. I have'nt used Sinatra in a long time so it took a while to go over the docs and read me. In particular I think the directory structure is something that took a while, since I ended up going for a more Modular style, therefore I had to make sure the files all linked together correctly.  
+- In my preveous role we used Minitest for our rails app (I know... I don't know why either) so it took a while for me to get used to the Rspec syntax again.
+
+If you had more time, what part of your project would you refactor? What other tradeoffs did you make?
+ - There are a few things that could have been done different. I would have added more controller testing. I ran out of time there and added some very simple tests. I would have added some more sad path testing. This goes for both the service specs and the controller spec.
+ - Better Validations would have been added, The first thing that comes to mind is the ISO-8061 timestamp format I did not have tinme to come back to that and come up with regex or use an existing gem.
+ - If I had more time I would have added some swagger docs to show examples of the endpoints that the api has.
+ - Something simple I could have done was added the faker gem to randomize testing data.
+ - Better error logging could have been made to better understand what error was hit
+ 

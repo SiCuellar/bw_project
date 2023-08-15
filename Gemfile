@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+ruby File.read('.ruby-version').strip
+
 
 gem 'sinatra'
 gem 'sinatra-contrib'
@@ -11,4 +13,4 @@ gem 'rspec'
 gem 'rack-test'
 
 gem 'pry'
-gem 'faker'
+# gem 'faker'
