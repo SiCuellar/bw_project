@@ -10,3 +10,4 @@ gem 'rspec'
 gem 'rack-test'
 
 gem 'pry'
+gem 'faker'

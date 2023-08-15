@@ -32,7 +32,6 @@ class ReadingsService
       end
 
       def fetch_readings(device_id)
-        # binding.pry
         @storage[device_id]
       end
   
