@@ -9,13 +9,13 @@ class ReadingsService
         
         raise "Device ID not provided" unless device_id
         raise "Readings not provided" unless readings.is_a?(Array)
-  
+        
         @storage[device_id] ||= []
-  
+        
         readings.each do |reading|
             timestamp = reading["timestamp"]
             count = reading["count"]
-        
+            
             raise "Invalid timestamp format" unless valid_timestamp?(timestamp)
             next unless count.is_a?(Integer)
         
@@ -30,6 +30,11 @@ class ReadingsService
       rescue => e
         false
       end
+
+      def fetch_readings(device_id)
+        # binding.pry
+        @storage[device_id]
+      end
   
       private
   
@@ -42,6 +47,7 @@ class ReadingsService
       def valid_timestamp?(timestamp)
         return false unless timestamp.is_a?(String)
         # figure out how to verify ISO-8061 format
+        true
       end
       
     end

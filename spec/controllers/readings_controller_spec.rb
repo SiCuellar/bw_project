@@ -26,4 +26,19 @@ describe 'ReadingsController' do
     end
 
   end
+
+  describe 'GET /readings/:id' do
+    let(:device_id) { "36d5658a-6908-479e-887e-a949ec199272" }
+    
+    it 'fetches readings for a specific device' do
+        get "/readings/#{device_id}"
+        expect(last_response.status).to eq(200)
+        expect(parsed_response["readings"]).to be_an_instance_of(Array)
+    end
+
+  end
+  
+  def parsed_response
+    JSON.parse(last_response.body)
+  end
 end

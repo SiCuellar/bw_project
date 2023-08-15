@@ -27,4 +27,20 @@ class ReadingsController < Sinatra::Base
     end
   end
 
+  get '/readings/:id' do |id|
+    begin
+      readings = ReadingsService.fetch_readings(id)
+
+      if readings
+        status 200
+        { readings: readings }.to_json
+      else
+        status 404
+        { error: 'Device not found or has no readings' }.to_json
+      end
+    rescue => e
+      status 400
+      { error: e.message }.to_json
+    end
+  end
 end
