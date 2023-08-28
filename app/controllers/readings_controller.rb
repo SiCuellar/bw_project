@@ -9,11 +9,11 @@ class ReadingsController < Sinatra::Base
     content_type :json
   end
 
-  get '/' do
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-    content_type :html
-    markdown.render(File.read('README.md'))
-  end
+  # get '/' do
+  #   markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+  #   content_type :html
+  #   markdown.render(File.read('README.md'))
+  # end
 
 
   post '/readings' do
@@ -51,4 +51,17 @@ class ReadingsController < Sinatra::Base
       { error: e.message }.to_json
     end
   end
+
+  get '/devices/:id' do |id|
+    begin 
+      status 200
+      counts = ReadingsService.device_counts(id)
+      { device_count: counts }.to_json
+    rescue => e
+      status
+      { error: e.message }.to_json
+    end 
+
+  end 
 end
+

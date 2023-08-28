@@ -34,6 +34,17 @@ class ReadingsService
       def fetch_readings(device_id)
         @storage[device_id]
       end
+
+      def device_counts(device_id)
+        device_readings = @storage[device_id]
+        if device_readings.any?
+          device_readings.map do |time_stamp_object|
+            time_stamp_object["count"]
+          end.sum
+        else 
+          false
+        end
+      end 
   
       private
   
